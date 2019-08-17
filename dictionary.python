@@ -1,0 +1,35 @@
+# Implementation of dictionary
+
+# Use case
+
+def words_to_frequencies(words):
+    myDict = {}
+    for word in words:
+        if word in myDict:
+            myDict[word] += 1
+        else;
+            myDict[word] = 1
+    return myDict
+
+# Time Complexity: O(n)
+
+def most_common_words(freqs):
+    most = max(freqs.values())
+    words = [
+        key 
+        for key, val in freqs.items()
+        if val == most
+    ]
+    return (words, best)
+        
+# Top-k frequent words composition
+
+def top_k(nums, k):
+    freq = {}
+    for num in nums:
+        if num in freq:
+            freq[num] += 1
+        else:
+            freq[num] = 1
+    sorted_tuples = sorted(freq.items(), key=lambda kv: -kv[1])
+    return [x[0] for x in sorted_tuples][:k]

@@ -1,0 +1,43 @@
+class _ListNode(object):
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+class LinkedList(object):
+    def __init__(self):
+        self._head = None
+        self._size = 0
+        self._tail = None
+    
+    def get(self, index):
+        if index < 0 or index >= self._size: 
+            return -1
+        return self._get(index).val
+
+    def _get(self, index): 
+        node = self._head
+        for i in range(index):
+            node = node.next
+        return node 
+    
+    def addAtHead(self, val):
+        if self._size == 0:
+            self._head = self._tail = _ListNode(val)
+        else:
+            new_head = _ListNode(val)
+            new_head.next = self._head
+            self._head = new_head
+        self.size += 1
+    
+    def addAtTail(self, val):
+        """
+        Append a node of value val to the last element of the linked list.
+        :type val: int
+        :rtype: None
+        """
+        if self._size == 0:
+          self._head = self._tail = _ListNode(val)
+        else:
+          self._tail.next = _ListNode(val)
+          self._tail = self._tail.next
+        self._size += 1
