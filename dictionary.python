@@ -13,10 +13,7 @@ def words_to_frequencies(words):
 
 def most_common_words(freqs):
     most = max(freqs.values())
-    words = [
-        key 
-        for key, val in freqs.items()
-        if val == most
-    ]
+    words = [key for key, val in freqs.items() if val == most]
     return (words, best)
     
+# Time Complexity: O(n)
