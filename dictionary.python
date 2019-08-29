@@ -1,6 +1,4 @@
-# Implementation of dictionary
-
-# Use case
+# Use cases of dictionary
 
 def words_to_frequencies(words):
     myDict = {}
