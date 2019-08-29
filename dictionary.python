@@ -21,15 +21,4 @@ def most_common_words(freqs):
         if val == most
     ]
     return (words, best)
-        
-# Top-k frequent words composition
-
-def top_k(nums, k):
-    freq = {}
-    for num in nums:
-        if num in freq:
-            freq[num] += 1
-        else:
-            freq[num] = 1
-    sorted_tuples = sorted(freq.items(), key=lambda kv: -kv[1])
-    return [x[0] for x in sorted_tuples][:k]
+    
